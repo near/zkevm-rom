@@ -48,7 +48,7 @@ async function runTest(pathTest, cmPols) {
     };
 
     // execute zkasm tests
-    try {
+    // try {
         const result = await smMain.execute(cmPols.Main, emptyInput, rom, config);
         console.log(chalk.green('   --> pass'), pathTest);
         if (argv.verbose) {
@@ -60,10 +60,10 @@ async function runTest(pathTest, cmPols) {
             console.log(chalk.blue('        --> logs'));
             console.log(result.logs);
         }
-    } catch (e) {
-        console.log(chalk.red('   --> fail'), pathTest);
-        throw new Error(e);
-    }
+    // } catch (e) {
+    //     console.log(chalk.red('   --> fail'), pathTest);
+    //     throw new Error(e);
+    // }
 }
 
 main();
